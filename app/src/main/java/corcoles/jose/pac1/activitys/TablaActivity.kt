@@ -11,5 +11,7 @@ class TablaActivity : AppCompatActivity() {
         setContentView(R.layout.activity_tabla)
         Toast.makeText(this, "Estas en el Activity de Cración de tabla",
             Toast.LENGTH_LONG).show()
+
+
     }
 }
