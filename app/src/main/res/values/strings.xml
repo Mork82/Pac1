@@ -8,4 +8,6 @@
     <string name="btn_irActivityReproductor">Reproductor</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signin">firma</string>
+    <string name="cancel">cancelar</string>
 </resources>
