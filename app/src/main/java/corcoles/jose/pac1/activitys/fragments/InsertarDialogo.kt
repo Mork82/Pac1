@@ -6,18 +6,24 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
+import corcoles.jose.pac1.R
 
 
-    class InsertarDialogo : DialogFragment() {
+class InsertarDialogo : DialogFragment() {
 
         override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+            //Inflamos el layot personalizado para el dialogo
+            val inflater= requireActivity().layoutInflater
+
             return activity?.let {
-                // Use the Builder class for convenient dialog construction
                 val builder = AlertDialog.Builder(it)
-                builder.setTitle("Pantalla de Login")
+               builder.setView(inflater.inflate(R.layout.dialogo_insertar,null))
+
+
+                builder.setTitle("Nueva Entrada")
                     .setPositiveButton("Guardar",
-                        DialogInterface.OnClickListener { dialog, id ->
-                            Toast.makeText(activity,"Esto funciona", Toast.LENGTH_LONG).show()
+                        DialogInterface.OnClickListener { dialog, id ->//Aquitendre que insertar en base de datos
+                            Toast.makeText(activity,"Entrada Enviada", Toast.LENGTH_LONG).show()
                             dialog.dismiss()//cerramos
                         })
                     .setNegativeButton("Cancelar",
@@ -25,6 +31,7 @@ import androidx.fragment.app.DialogFragment
                             // Cerrar cuadro dialogo
                             dialog.dismiss()
                         })
+
                 // Create the AlertDialog object and return it
                 builder.create()
             } ?: throw IllegalStateException("Activity cannot be null")
