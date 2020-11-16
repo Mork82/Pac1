@@ -11,6 +11,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         btnIrAtcv2.setOnClickListener {
             val intent = Intent(this, TablaActivity::class.java)
             startActivity(intent)
@@ -20,4 +22,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+
+
+
 }

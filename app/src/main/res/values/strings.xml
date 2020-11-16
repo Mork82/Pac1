@@ -11,4 +11,5 @@
     <string name="signin">firma</string>
     <string name="cancel">cancelar</string>
     <string name="titulo_insertar">Nueva Entrada</string>
+    <string name="hint_introduce_nombre">Introduce nombre</string>
 </resources>
